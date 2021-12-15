@@ -6,13 +6,6 @@ public class Cricket implements Saveable {
     private int chestNumber;
     private long totalRuns;
 
-    Cricket(String batsManname, int chestNumber, long totalRuns) {
-        this.batsManname = batsManname;
-        this.chestNumber = chestNumber;
-        this.totalRuns = totalRuns;
-    }
-
-
     @Override
     public void setValues(List<String> savedValues) {
         if (savedValues != null && savedValues.size() > 0) {

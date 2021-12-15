@@ -10,14 +10,12 @@ public class Main {
         int n = scanner.nextInt();
         switch (n) {
             case 1 -> {
-                Cricket cricket = new Cricket("Sachin", 10, 2000L);
-                saveDeatils(cricket);
+                Cricket cricket = new Cricket();
                 editValues(cricket);
                 loadValues(cricket);
             }
             case 2 -> {
-                BaseBall baseBAll = new BaseBall("tom hook", 170, 2000L);
-                saveDeatils(baseBAll);
+                BaseBall baseBAll = new BaseBall();
                 editValues(baseBAll);
                 loadValues(baseBAll);
             }
@@ -26,12 +24,6 @@ public class Main {
 
     private static void loadValues(Saveable loadSaveable) {
         System.out.println(loadSaveable);
-    }
-
-    private static void saveDeatils(Saveable loadSaveable) {
-        for (int i = 0; i < loadSaveable.getValues().size(); i++) {
-            System.out.println("Saving values :" + loadSaveable.getValues().get(i));
-        }
     }
 
     private static void editValues(Saveable editSavaeble) {

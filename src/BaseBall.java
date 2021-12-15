@@ -6,11 +6,6 @@ public class BaseBall implements Saveable {
     private int chestNumber;
     private long totalRuns;
 
-    BaseBall(String batsManname, int chestNumber, long totalRuns) {
-        this.batsManname = batsManname;
-        this.chestNumber = chestNumber;
-        this.totalRuns = totalRuns;
-    }
     @Override
     public void setValues(List<String> savedValues) {
         if (savedValues != null && savedValues.size() > 0) {
@@ -32,9 +27,9 @@ public class BaseBall implements Saveable {
     @Override
     public String toString() {
         return "Player Details{" +
-                "Player name='" + batsManname + '\'' +
+                "Base Ball Player Name='" + batsManname + '\'' +
                 ", Chest Number=" + chestNumber +
-                ", Total runs=" + totalRuns +
+                ", Total Scores=" + totalRuns +
                 '}';
     }
 }
