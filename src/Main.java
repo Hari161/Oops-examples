@@ -1,9 +1,12 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
-public class Main {
+abstract class Sports{
+    abstract void type(String type);
+}
+public class Main extends Sports {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        Main main=new Main();
         System.out.println("enter the category \n" +
                 "1 : Cricket \n" +
                 "2: Base Ball");
@@ -11,11 +14,13 @@ public class Main {
         switch (n) {
             case 1 -> {
                 Cricket cricket = new Cricket();
+                main.type("cricket");
                 editValues(cricket);
                 loadValues(cricket);
             }
             case 2 -> {
                 BaseBall baseBAll = new BaseBall();
+                main.type("Base Ball");
                 editValues(baseBAll);
                 loadValues(baseBAll);
             }
@@ -41,4 +46,8 @@ public class Main {
         editSavaeble.setValues(values);
     }
 
+    @Override
+    void type(String type) {
+        System.out.println("Type is : "+type);
+    }
 }

@@ -21,6 +21,7 @@ public class Cricket implements Saveable {
         values.add(0, batsManname);
         values.add(1, "" + chestNumber);
         values.add(2, "" + totalRuns);
+        toString();
         return values;
     }
 
